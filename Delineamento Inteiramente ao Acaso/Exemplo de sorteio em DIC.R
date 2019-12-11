@@ -1,8 +1,18 @@
-rm(list=ls()) # limpar os objetos
-require(agricolae) # carregar pacote agricolae
-trat <- c(1,2,3,4);trat # tratamentos
-r=c(5,5,5,5);r # numero repetições
+##REMOVE TODOS OS OBJETOS CRIADO NO AMBIENTE R.
+rm(list=ls())
 
-sort <- design.crd(trat,r,seed=10,serie=0); sort # sorteio para um DIC
+## CARREGA O PACOTE AGRICOLAE, PREVIAMENTE INSTALADO
+require(agricolae)
 
-matrix(sort$book$trat,6,byrow=T) # croqui
+## CRIANDO UM VETOR COM QUATRO ÍNDICES. E ATRIBUINDO O VALOR PARA DENTRO DO OBJETO OB_TRAT
+ob_trat <- c("A","B","C","D");
+
+## CRIANDO UM VETOR COM QUATRO ÍNDICES TAMBÉM. ATRIBUINDO O VALOR 5 PARA CADA INDICE, O
+## RESULTADO É ARMAZENADO NO OBJETO ob_rep
+ob_rep=c(5,5,5,5);
+
+## REALIZANDO O SORTEIO ATRAVÉS DO COMANDO DESIGN.CRD, QUE CRIAR DESENHOS RANDOMICOS.
+ob_sorteio <- design.crd(ob_trat,ob_rep,seed=10,serie=0);
+
+## GERA A MATRIZ, COM O CROQUI DO EXPERIMENTO.
+matrix(ob_sorteio$book$ob_trat,ob_rep,byrow=T)
