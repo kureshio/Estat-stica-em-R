@@ -1,6 +1,7 @@
 
-# ALTERA O DIRETÓRIO DE TRABALHO DO R.
-setwd("/home/kureshio/github/Estatística R/Delineamento Inteiramente ao Acaso/")
+## ALTERA O DIRETÓRIO DE TRABALHO DO R.
+## DIGITE NO COMANDO SETWD, O CAMINHO ONDE ESTÁ A SUA PASTA DE TRABALHO.
+##setwd("")
 
 ob_dados <-read.csv("Exemplo-dados.csv", header = TRUE, sep=";",dec=".")
 
