@@ -21,7 +21,7 @@ str(ob_dados)
 ## E NÃO COMO STRINGS
 ob_fatores<-transform(ob_dados, Trat=factor(TRAT), Rep=factor(REP));
 
-## COMANDO DIC, PERTENCE AO PACOTE EXPDES. NOTE QUE JÁ SAI NA SEQUÊNCIA O TESTE SCOTTKNOTT
+## COMANDO DIC, PERTENCE AO PACOTE EXPDES. NOTE QUE JÁ SAI NA SEQUÊNCIA O TESTE TUKEY
 dic(trat=ob_fatores$TRAT, resp=ob_fatores$VALOR, quali = TRUE, mcomp = "tukey", nl = FALSE,
       hvar='bartlett', sigT = 0.05, sigF = 0.05)
   
