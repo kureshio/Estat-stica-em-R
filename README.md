@@ -1,1 +1,1 @@
-# Estat-stica-em-R
+# Estatística em R
